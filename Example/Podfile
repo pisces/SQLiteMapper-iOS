@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'SQLiteMapper_Example' do
+  pod 'SQLiteMapper', :path => '../'
+
+  target 'SQLiteMapper_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
