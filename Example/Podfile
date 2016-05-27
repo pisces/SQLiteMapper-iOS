@@ -2,10 +2,8 @@ use_frameworks!
 
 target 'SQLiteMapper_Example' do
   pod 'SQLiteMapper', :path => '../'
+end
 
-  target 'SQLiteMapper_Tests' do
-    inherit! :search_paths
-
-    
-  end
+target 'SQLiteMapper_Tests' do
+  pod 'SQLiteMapper', :path => '../'
 end

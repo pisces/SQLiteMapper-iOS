@@ -14,6 +14,11 @@
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
 		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
+		DC0F55881CF81BAF00A8EB37 /* DBModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC0F55861CF81BA900A8EB37 /* DBModelTest.swift */; };
+		DCC018C91CF6991600B2F1E9 /* SQLiteMapperTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCC018C81CF6991600B2F1E9 /* SQLiteMapperTest.swift */; };
+		DCC018D21CF6AF8C00B2F1E9 /* ex1-sqlmap1.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC018CF1CF6AF8C00B2F1E9 /* ex1-sqlmap1.plist */; };
+		DCC018D31CF6AF8C00B2F1E9 /* sqlitemap-config.plist in Resources */ = {isa = PBXBuildFile; fileRef = DCC018D01CF6AF8C00B2F1E9 /* sqlitemap-config.plist */; };
+		DCC018D71CF6EB0000B2F1E9 /* ex1.db in Resources */ = {isa = PBXBuildFile; fileRef = DCC018D61CF6EB0000B2F1E9 /* ex1.db */; };
 		FB9B6110BF1993CF8D2A3087 /* Pods_SQLiteMapper_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9C02E2AD3012199CD3BDA2A0 /* Pods_SQLiteMapper_Example.framework */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +52,11 @@
 		9C02E2AD3012199CD3BDA2A0 /* Pods_SQLiteMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLiteMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B35190B675A7642BB2A046C2 /* Pods-SQLiteMapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SQLiteMapper_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SQLiteMapper_Example/Pods-SQLiteMapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		D51BC2FBC68055C7F7F044DD /* SQLiteMapper.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SQLiteMapper.podspec; path = ../SQLiteMapper.podspec; sourceTree = "<group>"; };
+		DC0F55861CF81BA900A8EB37 /* DBModelTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DBModelTest.swift; sourceTree = "<group>"; };
+		DCC018C81CF6991600B2F1E9 /* SQLiteMapperTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SQLiteMapperTest.swift; sourceTree = "<group>"; };
+		DCC018CF1CF6AF8C00B2F1E9 /* ex1-sqlmap1.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "ex1-sqlmap1.plist"; sourceTree = "<group>"; };
+		DCC018D01CF6AF8C00B2F1E9 /* sqlitemap-config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "sqlitemap-config.plist"; sourceTree = "<group>"; };
+		DCC018D61CF6EB0000B2F1E9 /* ex1.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = ex1.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,7 +125,12 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				DCC018D61CF6EB0000B2F1E9 /* ex1.db */,
+				DCC018CF1CF6AF8C00B2F1E9 /* ex1-sqlmap1.plist */,
+				DCC018D01CF6AF8C00B2F1E9 /* sqlitemap-config.plist */,
 				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				DCC018C81CF6991600B2F1E9 /* SQLiteMapperTest.swift */,
+				DC0F55861CF81BA900A8EB37 /* DBModelTest.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -209,7 +224,7 @@
 		607FACC81AFB9204008FA782 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0720;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
@@ -256,6 +271,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC018D31CF6AF8C00B2F1E9 /* sqlitemap-config.plist in Resources */,
+				DCC018D71CF6EB0000B2F1E9 /* ex1.db in Resources */,
+				DCC018D21CF6AF8C00B2F1E9 /* ex1-sqlmap1.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DCC018C91CF6991600B2F1E9 /* SQLiteMapperTest.swift in Sources */,
+				DC0F55881CF81BAF00A8EB37 /* DBModelTest.swift in Sources */,
 				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -514,6 +534,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 221407E81BA5FD9AF68C0066 /* Pods-SQLiteMapper_Tests.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -526,6 +547,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -533,6 +556,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 072B3D4D5708D02EFEF0E4FD /* Pods-SQLiteMapper_Tests.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -541,6 +565,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

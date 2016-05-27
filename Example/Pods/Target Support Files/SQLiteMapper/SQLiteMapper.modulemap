@@ -1,0 +1,6 @@
+framework module SQLiteMapper {
+  umbrella header "SQLiteMapper-umbrella.h"
+
+  export *
+  module * { export * }
+}

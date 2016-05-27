@@ -1,0 +1,24 @@
+PODS:
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - PSFoundation (1.0.3)
+  - SQLiteMapper (0.1.0):
+    - FMDB
+    - PSFoundation
+
+DEPENDENCIES:
+  - SQLiteMapper (from `../`)
+
+EXTERNAL SOURCES:
+  SQLiteMapper:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  PSFoundation: b9e94c4279bac37b87529384da601e04c5ed0952
+  SQLiteMapper: e8d652501e74ad237e2cc5eb5bbab70bfd64065d
+
+PODFILE CHECKSUM: f2cfef4ac2b026dfd3c30c605a13032adb55350f
+
+COCOAPODS: 1.0.0

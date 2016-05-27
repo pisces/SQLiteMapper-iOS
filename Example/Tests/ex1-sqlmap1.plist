@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>insert</key>
+	<string>INSERT INTO developer(name, age) VALUES({name}, {age})</string>
+    
+    <key>select</key>
+    <string>SELECT * FROM developer</string>
+    
+    <key>select-developer</key>
+    <string>SELECT * FROM developer WHERE name={name}</string>
+    
+    <key>insert-multiple</key>
+    <array>
+        <string>INSERT INTO developer(name, age) VALUES({name1}, {age1})</string>
+        <string>INSERT INTO developer(name, age) VALUES({name2}, {age2})</string>
+        <string>INSERT INTO developer(name, age) VALUES({name3}, {age3})</string>
+    </array>
+    
+    <key>delete</key>
+    <string>DELETE FROM developer</string>
+</dict>
+</plist>
