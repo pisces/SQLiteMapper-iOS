@@ -1,0 +1,1389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		071717E0D486F697F37B73B8F6DA5961 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */; };
+		0D529158D4ED569DA44EA07F8100A706 /* PSFoundation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DC02E487ED169247CEBC4E553A45CB2 /* PSFoundation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 01255E47CA9E47DAAAD94280DC88F1AE /* FMDatabaseQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */ = {isa = PBXBuildFile; fileRef = AF51A1EB0C0AE84EFF69B7AF8BAAD57C /* FMResultSet.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1EB672AE92F3A1AEFC12C827924B2F29 /* NSBundle+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BF7991B4836F214F4117B11D73C5C3B /* NSBundle+PSFoundation.m */; };
+		2CB86A732E0E6D3F82BEEE5B3A287C9E /* NSDate+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B546177A4BC08C498A4B8CD16D8CEE4 /* NSDate+PSFoundation.m */; };
+		2D458F3CAAD81966CEC86DC5C3B31EC6 /* NSString+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E71358B6A68B4A7E3A2B219A09DD740 /* NSString+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DD0BC3D2CE495492404D847B19B9DB4 /* Pods-SQLiteMapper_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C39ACBE5E9E135FBE80FD5DE1662178 /* Pods-SQLiteMapper_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		33C101C535054028190E6B3068425B69 /* NSArray+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 46C4EE61525271661ECF881C980C16A4 /* NSArray+PSFoundation.m */; };
+		356A0EE4787963EC270F3C1654E19316 /* AbstractModel.h in Headers */ = {isa = PBXBuildFile; fileRef = CD708CDFF1E41364678219723371F501 /* AbstractModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		387F7B30E452A88291CEEB210C45EE60 /* NSFileManager+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E621F83B9517AE86393EEF21B0AB8C8 /* NSFileManager+PSFoundation.m */; };
+		391CF504DF9956FC88FB0865A05BFF38 /* PSFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 139EB4FD33C79EB50BF1D32008DA9BD9 /* PSFoundation.framework */; };
+		39B20EF9F582270DC9C58AC95755E53B /* BaseObject.h in Headers */ = {isa = PBXBuildFile; fileRef = BEC3460AD6AB2EE5E767B329778AB894 /* BaseObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */ = {isa = PBXBuildFile; fileRef = 789B5B26652329403DB94B15F6051140 /* FMDB.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */ = {isa = PBXBuildFile; fileRef = 74546C795609DBA4DFEEEC09AD927E00 /* FMDatabase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		448848365AD1F7DD667A9864D9745314 /* NSArray+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = B92ED39B50AE25A92C46A4AFFFF48A65 /* NSArray+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4AD5DDFD57B188D5F654A36E885EFFE6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */; };
+		4D468FB5F2F05FB75C469E5218320798 /* NSBundle+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 43855708DE29B019696C626A97D04BCB /* NSBundle+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5F9D9D9ECC83FD73DDA8042B8AB8F4F8 /* PSFoundation.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2435ED100E625A3085FF327996E01396 /* PSFoundation.bundle */; };
+		643FD8E9B1BD776AB7265A131C158BB6 /* NSURL+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 420B2D5D5D2039E9F0EED88FD2ED1A54 /* NSURL+PSFoundation.m */; };
+		67FB310DF34F9EBCF36F4EE60E1ED4D9 /* ko.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 964F131FBBB66987B70EF92D30AA3A95 /* ko.lproj */; };
+		6901C07AD3A70B8D71026E5DCED3E670 /* AbstractModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE49D56D01CFEDE46EC09C90213DBF59 /* AbstractModel.m */; };
+		6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */ = {isa = PBXBuildFile; fileRef = 632EFAA436C9C99FE5BD9306505A5D9C /* FMDatabasePool.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D3150F1A6CC376A4774EF415375E686 /* model.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AB389E661189A4E11E3F357EB800A75 /* model.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		73641CCC2759EC52EB0C04C51A7C3F70 /* SQLiteMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F939D34F48C3BF6F268DFE5F2014733 /* SQLiteMapper.swift */; };
+		74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 1CB170D2F548C6DDAD2211314FDC5633 /* FMDatabaseAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		74AB8F8B6168C76BCFE07416E3083F9D /* PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 08C18C2EC5BF61B42086184558B5C94D /* PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		76C0DAAC36A6DB7D7066F195D8406336 /* SQLiteMapper-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F28E4F0A084B779A4E4595B89B1D9E72 /* SQLiteMapper-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7B484DAA91FD7EAB6CADB11B3527E9BB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */; };
+		7BF43A967F7898BB21AD10FE758F10FF /* NSFileManager+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 7FE1459F708A03089F3C020E3B570535 /* NSFileManager+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A06D4A2F993588B57FCFAD136A5FFA9 /* FMResultSet.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		880FAE079031567F6C262114D8200085 /* DataLoadValidator.h in Headers */ = {isa = PBXBuildFile; fileRef = FADF65FAB084746AE468CFAAC339D49A /* DataLoadValidator.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		89583359CD2C7AE8B43A9A83D97560B2 /* DBModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1085E309146DAF275297BFC1426668C /* DBModel.swift */; };
+		8962108D275D067EC272F43DA27B03D3 /* Pods-SQLiteMapper_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D9706D3F7DCF36F86EF930B6CD793AD7 /* Pods-SQLiteMapper_Tests-dummy.m */; };
+		8FD0B67D285B107A1CE37F2F4301CF24 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */; };
+		95B3C7A795048A31FDF6BD0D9B502C64 /* PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EDF2989510CD2DE130815CBFD163E0 /* PSFoundation.m */; };
+		9697AFA8C4B5CCB8F2C8E10F3037765E /* NSObject+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 37E9712D0096CD8AE8D6BA3CBD0B729A /* NSObject+PSFoundation.m */; };
+		9DEF3F1F37CA2B7D4CAB96C8124B79AB /* NSURLRequest+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = EC2DB90A7903C1375D4A924717F83F0B /* NSURLRequest+PSFoundation.m */; };
+		A498D145B28100976DD358E1A47CA216 /* NSObject+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = C67B44A52FE964E706E153035356BC22 /* NSObject+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 027DA712DF485D866B0600403CAC13FE /* FMDB-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AEF186765F0021631FF7C88F5C52B3CC /* NSURL+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = F004D59896E97BEC19344A20BA868AE6 /* NSURL+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B3CB6107C4F1EA5D972DEDF8311C9A88 /* NSString+PSFoundation.m in Sources */ = {isa = PBXBuildFile; fileRef = 7985A267001A60B8403ACEC25FC6FF3A /* NSString+PSFoundation.m */; };
+		B9FC350DB40473DED8934126D7FBF3C2 /* AbstractJSONModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 7A3AD3E04AA922E79CF1A9A64769E655 /* AbstractJSONModel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 151E43513D6494B73716E466F85C1D95 /* FMDB-dummy.m */; };
+		BB01CB6BBB71640E3960309215FDF074 /* DataLoadValidator.m in Sources */ = {isa = PBXBuildFile; fileRef = CC68DC6CBCAA38FD7EA08296583FE5BE /* DataLoadValidator.m */; };
+		BE9AF2B7F5F8C16378B6E7BE758CAEDC /* FMDB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8249CC62183F94E4DA80B01DE75D06E7 /* FMDB.framework */; };
+		C2FADB36A22F88F154D0A9397305DB44 /* NSDate+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 3870066A811325B4CD9336B7FFBD6EAC /* NSDate+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C76792C99423717FCA45A404B004CCFC /* ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 840F222760D4F56E9500EB5B91D1ED68 /* ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 993451B5353674FDFD023CEABA68F033 /* FMDatabasePool.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CD06AAC73EE61AEC64F7FFB0DF660481 /* AbstractJSONModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 874E6F52D0EEBF416676965674E1F26F /* AbstractJSONModel.m */; };
+		CF453B8FE9E73AB47658BC2FFE36560E /* en.lproj in Resources */ = {isa = PBXBuildFile; fileRef = 4BC74364F45AE4E3B405B7AC168EA8BD /* en.lproj */; };
+		DC0A6BC312973685A8FD11437E83E67D /* NSURLRequest+PSFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = 915BE5E22C33D29F37C028F5598280D6 /* NSURLRequest+PSFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC52CEC1396647FB3BFF704ABA73CF94 /* BaseObject.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C46891C65BDA156393616EA946DD44 /* BaseObject.m */; };
+		DE3096F5280253804545A728472CC740 /* PSFoundation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC143FBBAE010BE101259006CDF881CC /* PSFoundation-dummy.m */; };
+		DF28E2798E6AB5379D196FC0B3578128 /* Pods-SQLiteMapper_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 484D801F5866FEE450D14EA14C6F275D /* Pods-SQLiteMapper_Example-dummy.m */; };
+		E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AEC9CBE96B96BAF2A3E90B453B11E7 /* FMDatabaseQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 400D1C29CD40E40AD30A76C7306191E7 /* FMDatabaseAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F2A119A80367061C29077A8DC6E8E608 /* SQLiteMapper-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E401A380B864A6BC8EACC538658F969 /* SQLiteMapper-dummy.m */; };
+		F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 9114689EE92371152B8FCEB28E329BD5 /* FMDatabase.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F84586F3C88E81F488BF596099635AAD /* Pods-SQLiteMapper_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E38D462091A0ADC8D5DF59B5E2DB9CB5 /* Pods-SQLiteMapper_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FA06D9B304DC63A9FDF6C63F8516841D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */; };
+		FA0F8C0CBF00BD33B306D6B758473620 /* NSBundle+SQLiteMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5EBF2E4503265276A17F63C6B2F23DC /* NSBundle+SQLiteMapper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		196A22FD7DC4BD9CDD9C5B8185E182CE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		22BFF69171A4F30BEA462E4DC82D692A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43B45F74E5BDB1F62739748DAB39922B;
+			remoteInfo = PSFoundation;
+		};
+		455113486C679201B9FE6C6FB76729F0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43B45F74E5BDB1F62739748DAB39922B;
+			remoteInfo = PSFoundation;
+		};
+		6933704B701D859E5C11B2AD0522EF1D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 43B45F74E5BDB1F62739748DAB39922B;
+			remoteInfo = PSFoundation;
+		};
+		81A561BA5F121753226206E43FC390A4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7B4614A6D000C5E45AA5F9C2CC1697D6;
+			remoteInfo = "PSFoundation-PSFoundation";
+		};
+		A299DA87477D514AC8422FCBED10A5AC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		BCF4DCFCEC0DD857E358F8B1AC83AA33 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 23CF27B2BA6AC7125EFFEDA8C5AA819F;
+			remoteInfo = FMDB;
+		};
+		DB90001C7CF98E4D37475EF5A6E2DD70 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B575B0B3A57881BE8AEFEB071C711756;
+			remoteInfo = SQLiteMapper;
+		};
+		E16F302526ED8C3B4DB22FF200EDBDD5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B575B0B3A57881BE8AEFEB071C711756;
+			remoteInfo = SQLiteMapper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01255E47CA9E47DAAAD94280DC88F1AE /* FMDatabaseQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseQueue.m; path = src/fmdb/FMDatabaseQueue.m; sourceTree = "<group>"; };
+		027DA712DF485D866B0600403CAC13FE /* FMDB-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-umbrella.h"; sourceTree = "<group>"; };
+		05648C284A742AFFE12FCB551664FE1E /* Pods-SQLiteMapper_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQLiteMapper_Tests.release.xcconfig"; sourceTree = "<group>"; };
+		08C18C2EC5BF61B42086184558B5C94D /* PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PSFoundation.h; path = PSFoundation/Classes/PSFoundation.h; sourceTree = "<group>"; };
+		0A672391680B88E83F86F37CA09B5146 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		139EB4FD33C79EB50BF1D32008DA9BD9 /* PSFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		151E43513D6494B73716E466F85C1D95 /* FMDB-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FMDB-dummy.m"; sourceTree = "<group>"; };
+		16EE3CF219AA0713D40DA45C3896CE35 /* FMDB.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FMDB.xcconfig; sourceTree = "<group>"; };
+		174C0E3AF1BA5A03FDB95106FBBF9257 /* Pods-SQLiteMapper_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQLiteMapper_Tests.debug.xcconfig"; sourceTree = "<group>"; };
+		1BF7991B4836F214F4117B11D73C5C3B /* NSBundle+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSBundle+PSFoundation.m"; path = "PSFoundation/Classes/NSBundle+PSFoundation.m"; sourceTree = "<group>"; };
+		1CB170D2F548C6DDAD2211314FDC5633 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseAdditions.h; path = src/fmdb/FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		1DC02E487ED169247CEBC4E553A45CB2 /* PSFoundation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PSFoundation-umbrella.h"; sourceTree = "<group>"; };
+		1F420A28CA63AA46FFB40459FA48C325 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2435ED100E625A3085FF327996E01396 /* PSFoundation.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSFoundation.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		32BDCADEBF04198D2FD7D1E4C8BD4A7B /* Pods-SQLiteMapper_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SQLiteMapper_Tests-frameworks.sh"; sourceTree = "<group>"; };
+		34885A9CA8489AA2539D86F9C7BA0945 /* Pods-SQLiteMapper_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQLiteMapper_Example.release.xcconfig"; sourceTree = "<group>"; };
+		3587AF07404687F78CCF1EB933E9C74E /* PSFoundation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PSFoundation-prefix.pch"; sourceTree = "<group>"; };
+		36EDF2989510CD2DE130815CBFD163E0 /* PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PSFoundation.m; path = PSFoundation/Classes/PSFoundation.m; sourceTree = "<group>"; };
+		37E9712D0096CD8AE8D6BA3CBD0B729A /* NSObject+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PSFoundation.m"; path = "PSFoundation/Classes/NSObject+PSFoundation.m"; sourceTree = "<group>"; };
+		3870066A811325B4CD9336B7FFBD6EAC /* NSDate+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDate+PSFoundation.h"; path = "PSFoundation/Classes/NSDate+PSFoundation.h"; sourceTree = "<group>"; };
+		3AB389E661189A4E11E3F357EB800A75 /* model.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = model.h; path = PSFoundation/Classes/model.h; sourceTree = "<group>"; };
+		3B546177A4BC08C498A4B8CD16D8CEE4 /* NSDate+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDate+PSFoundation.m"; path = "PSFoundation/Classes/NSDate+PSFoundation.m"; sourceTree = "<group>"; };
+		400D1C29CD40E40AD30A76C7306191E7 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabaseAdditions.m; path = src/fmdb/FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		420B2D5D5D2039E9F0EED88FD2ED1A54 /* NSURL+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURL+PSFoundation.m"; path = "PSFoundation/Classes/NSURL+PSFoundation.m"; sourceTree = "<group>"; };
+		43855708DE29B019696C626A97D04BCB /* NSBundle+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSBundle+PSFoundation.h"; path = "PSFoundation/Classes/NSBundle+PSFoundation.h"; sourceTree = "<group>"; };
+		438EA8A3D629073004F415CFF282BADF /* Pods_SQLiteMapper_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLiteMapper_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		46107D18C9FECEBAEBF7CB3F5FC59E68 /* ResourceBundle-PSFoundation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-PSFoundation-Info.plist"; sourceTree = "<group>"; };
+		46C4EE61525271661ECF881C980C16A4 /* NSArray+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PSFoundation.m"; path = "PSFoundation/Classes/NSArray+PSFoundation.m"; sourceTree = "<group>"; };
+		46EC77A8F3C9C8081EF0CFBD84F0CED6 /* Pods-SQLiteMapper_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQLiteMapper_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
+		484D801F5866FEE450D14EA14C6F275D /* Pods-SQLiteMapper_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SQLiteMapper_Example-dummy.m"; sourceTree = "<group>"; };
+		49D509297585D0271BA6895E4F11CA80 /* Pods-SQLiteMapper_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SQLiteMapper_Example.modulemap"; sourceTree = "<group>"; };
+		4BC74364F45AE4E3B405B7AC168EA8BD /* en.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = en.lproj; path = PSFoundation/Assets/en.lproj; sourceTree = "<group>"; };
+		4E621F83B9517AE86393EEF21B0AB8C8 /* NSFileManager+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSFileManager+PSFoundation.m"; path = "PSFoundation/Classes/NSFileManager+PSFoundation.m"; sourceTree = "<group>"; };
+		4F002A6A4465DDE5E54E933B5D15278C /* Pods-SQLiteMapper_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-SQLiteMapper_Tests.modulemap"; sourceTree = "<group>"; };
+		4F939D34F48C3BF6F268DFE5F2014733 /* SQLiteMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SQLiteMapper.swift; sourceTree = "<group>"; };
+		5C6C492C9E33EA31A3A836965E914A28 /* SQLiteMapper.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SQLiteMapper.xcconfig; sourceTree = "<group>"; };
+		5E401A380B864A6BC8EACC538658F969 /* SQLiteMapper-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SQLiteMapper-dummy.m"; sourceTree = "<group>"; };
+		632EFAA436C9C99FE5BD9306505A5D9C /* FMDatabasePool.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabasePool.h; path = src/fmdb/FMDatabasePool.h; sourceTree = "<group>"; };
+		6E71358B6A68B4A7E3A2B219A09DD740 /* NSString+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+PSFoundation.h"; path = "PSFoundation/Classes/NSString+PSFoundation.h"; sourceTree = "<group>"; };
+		6E9EC194A3CDE42ABB7EEF2F925EDEB0 /* PSFoundation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PSFoundation.modulemap; sourceTree = "<group>"; };
+		70C062F20E1BAADBF4409C4A963102A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7326C80387430BB73E129D14760BC1FC /* Pods-SQLiteMapper_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SQLiteMapper_Example-frameworks.sh"; sourceTree = "<group>"; };
+		74546C795609DBA4DFEEEC09AD927E00 /* FMDatabase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabase.h; path = src/fmdb/FMDatabase.h; sourceTree = "<group>"; };
+		789B5B26652329403DB94B15F6051140 /* FMDB.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDB.h; path = src/fmdb/FMDB.h; sourceTree = "<group>"; };
+		7985A267001A60B8403ACEC25FC6FF3A /* NSString+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+PSFoundation.m"; path = "PSFoundation/Classes/NSString+PSFoundation.m"; sourceTree = "<group>"; };
+		7A3AD3E04AA922E79CF1A9A64769E655 /* AbstractJSONModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractJSONModel.h; path = PSFoundation/Classes/AbstractJSONModel.h; sourceTree = "<group>"; };
+		7FE1459F708A03089F3C020E3B570535 /* NSFileManager+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSFileManager+PSFoundation.h"; path = "PSFoundation/Classes/NSFileManager+PSFoundation.h"; sourceTree = "<group>"; };
+		8249CC62183F94E4DA80B01DE75D06E7 /* FMDB.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FMDB.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		840F222760D4F56E9500EB5B91D1ED68 /* ext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ext.h; path = PSFoundation/Classes/ext.h; sourceTree = "<group>"; };
+		874E6F52D0EEBF416676965674E1F26F /* AbstractJSONModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractJSONModel.m; path = PSFoundation/Classes/AbstractJSONModel.m; sourceTree = "<group>"; };
+		8A06D4A2F993588B57FCFAD136A5FFA9 /* FMResultSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = src/fmdb/FMResultSet.m; sourceTree = "<group>"; };
+		8B81245BDE684DF780CD0C23AD7F0EDF /* Pods-SQLiteMapper_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SQLiteMapper_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8C39ACBE5E9E135FBE80FD5DE1662178 /* Pods-SQLiteMapper_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SQLiteMapper_Tests-umbrella.h"; sourceTree = "<group>"; };
+		9114689EE92371152B8FCEB28E329BD5 /* FMDatabase.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabase.m; path = src/fmdb/FMDatabase.m; sourceTree = "<group>"; };
+		915BE5E22C33D29F37C028F5598280D6 /* NSURLRequest+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURLRequest+PSFoundation.h"; path = "PSFoundation/Classes/NSURLRequest+PSFoundation.h"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		964F131FBBB66987B70EF92D30AA3A95 /* ko.lproj */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder; name = ko.lproj; path = PSFoundation/Assets/ko.lproj; sourceTree = "<group>"; };
+		96E784DC8E2059F3E298704FC47E3A1B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		977C7158175AB559D5117260EE1D0413 /* Pods-SQLiteMapper_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SQLiteMapper_Tests-resources.sh"; sourceTree = "<group>"; };
+		9861D70D3659C2AB2042C00091ECDBC8 /* SQLiteMapper.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SQLiteMapper.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		993451B5353674FDFD023CEABA68F033 /* FMDatabasePool.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FMDatabasePool.m; path = src/fmdb/FMDatabasePool.m; sourceTree = "<group>"; };
+		9AAEF9A4BB8C2D9585628302E8F0572A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		A123C2166CF5304E73511AA536EAB618 /* SQLiteMapper-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLiteMapper-prefix.pch"; sourceTree = "<group>"; };
+		A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PSFoundation.xcconfig; sourceTree = "<group>"; };
+		AED8E1909D189317E35EA832F82BD9F8 /* FMDB.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = FMDB.modulemap; sourceTree = "<group>"; };
+		AF51A1EB0C0AE84EFF69B7AF8BAAD57C /* FMResultSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = src/fmdb/FMResultSet.h; sourceTree = "<group>"; };
+		B92ED39B50AE25A92C46A4AFFFF48A65 /* NSArray+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSArray+PSFoundation.h"; path = "PSFoundation/Classes/NSArray+PSFoundation.h"; sourceTree = "<group>"; };
+		BA49F8E5824D6A8B2AB9B2CEDEC454FC /* SQLiteMapper.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = SQLiteMapper.modulemap; sourceTree = "<group>"; };
+		BC143FBBAE010BE101259006CDF881CC /* PSFoundation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PSFoundation-dummy.m"; sourceTree = "<group>"; };
+		BEC3460AD6AB2EE5E767B329778AB894 /* BaseObject.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BaseObject.h; path = PSFoundation/Classes/BaseObject.h; sourceTree = "<group>"; };
+		C0E2466BC53E7E9918C2D4603033F23D /* Pods-SQLiteMapper_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SQLiteMapper_Example-acknowledgements.plist"; sourceTree = "<group>"; };
+		C4799BE3FDD8AD98AC82202960765EC5 /* Pods_SQLiteMapper_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SQLiteMapper_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C5EBF2E4503265276A17F63C6B2F23DC /* NSBundle+SQLiteMapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSBundle+SQLiteMapper.swift"; sourceTree = "<group>"; };
+		C67B44A52FE964E706E153035356BC22 /* NSObject+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSObject+PSFoundation.h"; path = "PSFoundation/Classes/NSObject+PSFoundation.h"; sourceTree = "<group>"; };
+		CC68DC6CBCAA38FD7EA08296583FE5BE /* DataLoadValidator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = DataLoadValidator.m; path = PSFoundation/Classes/DataLoadValidator.m; sourceTree = "<group>"; };
+		CD708CDFF1E41364678219723371F501 /* AbstractModel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = AbstractModel.h; path = PSFoundation/Classes/AbstractModel.h; sourceTree = "<group>"; };
+		D04C46D8676876DE5B48A857B5E2A2BB /* FMDB-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FMDB-prefix.pch"; sourceTree = "<group>"; };
+		D9706D3F7DCF36F86EF930B6CD793AD7 /* Pods-SQLiteMapper_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SQLiteMapper_Tests-dummy.m"; sourceTree = "<group>"; };
+		DAE507F374292BAA125DE98A640B7D1F /* Pods-SQLiteMapper_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SQLiteMapper_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		E1085E309146DAF275297BFC1426668C /* DBModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DBModel.swift; sourceTree = "<group>"; };
+		E38D462091A0ADC8D5DF59B5E2DB9CB5 /* Pods-SQLiteMapper_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SQLiteMapper_Example-umbrella.h"; sourceTree = "<group>"; };
+		E4AE41E82D8428499794CFFF2A43AF26 /* Pods-SQLiteMapper_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SQLiteMapper_Example-resources.sh"; sourceTree = "<group>"; };
+		EC2DB90A7903C1375D4A924717F83F0B /* NSURLRequest+PSFoundation.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSURLRequest+PSFoundation.m"; path = "PSFoundation/Classes/NSURLRequest+PSFoundation.m"; sourceTree = "<group>"; };
+		EF708E7C7760D3A5ABEE2F99E1680F2A /* Pods-SQLiteMapper_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SQLiteMapper_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		F004D59896E97BEC19344A20BA868AE6 /* NSURL+PSFoundation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSURL+PSFoundation.h"; path = "PSFoundation/Classes/NSURL+PSFoundation.h"; sourceTree = "<group>"; };
+		F28E4F0A084B779A4E4595B89B1D9E72 /* SQLiteMapper-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SQLiteMapper-umbrella.h"; sourceTree = "<group>"; };
+		F494C3DB524568FAEA89CFC2558C3FE4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F8AEC9CBE96B96BAF2A3E90B453B11E7 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FMDatabaseQueue.h; path = src/fmdb/FMDatabaseQueue.h; sourceTree = "<group>"; };
+		F8C46891C65BDA156393616EA946DD44 /* BaseObject.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BaseObject.m; path = PSFoundation/Classes/BaseObject.m; sourceTree = "<group>"; };
+		F97BB2C6172F241923F98DFF12DDB8C9 /* PSFoundation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PSFoundation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FADF65FAB084746AE468CFAAC339D49A /* DataLoadValidator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = DataLoadValidator.h; path = PSFoundation/Classes/DataLoadValidator.h; sourceTree = "<group>"; };
+		FE49D56D01CFEDE46EC09C90213DBF59 /* AbstractModel.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = AbstractModel.m; path = PSFoundation/Classes/AbstractModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8FD0B67D285B107A1CE37F2F4301CF24 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2D56B09D9770D251E068294532ED5DCF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AD5DDFD57B188D5F654A36E885EFFE6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		843BA5FFA9DC95C0C292EA5FCB9492A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA06D9B304DC63A9FDF6C63F8516841D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A7BE28FD801720ABDDA86AFBEAFA5A60 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BE9AF2B7F5F8C16378B6E7BE758CAEDC /* FMDB.framework in Frameworks */,
+				071717E0D486F697F37B73B8F6DA5961 /* Foundation.framework in Frameworks */,
+				391CF504DF9956FC88FB0865A05BFF38 /* PSFoundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5C632A2E5C1B106C5ADC8327115F289 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7B484DAA91FD7EAB6CADB11B3527E9BB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C81BF070C7982FE49D2CE50562FD420C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CEC491A614A8F7B493589FED51D98DD /* Pods-SQLiteMapper_Tests */ = {
+			isa = PBXGroup;
+			children = (
+				70C062F20E1BAADBF4409C4A963102A4 /* Info.plist */,
+				4F002A6A4465DDE5E54E933B5D15278C /* Pods-SQLiteMapper_Tests.modulemap */,
+				8B81245BDE684DF780CD0C23AD7F0EDF /* Pods-SQLiteMapper_Tests-acknowledgements.markdown */,
+				46EC77A8F3C9C8081EF0CFBD84F0CED6 /* Pods-SQLiteMapper_Tests-acknowledgements.plist */,
+				D9706D3F7DCF36F86EF930B6CD793AD7 /* Pods-SQLiteMapper_Tests-dummy.m */,
+				32BDCADEBF04198D2FD7D1E4C8BD4A7B /* Pods-SQLiteMapper_Tests-frameworks.sh */,
+				977C7158175AB559D5117260EE1D0413 /* Pods-SQLiteMapper_Tests-resources.sh */,
+				8C39ACBE5E9E135FBE80FD5DE1662178 /* Pods-SQLiteMapper_Tests-umbrella.h */,
+				174C0E3AF1BA5A03FDB95106FBBF9257 /* Pods-SQLiteMapper_Tests.debug.xcconfig */,
+				05648C284A742AFFE12FCB551664FE1E /* Pods-SQLiteMapper_Tests.release.xcconfig */,
+			);
+			name = "Pods-SQLiteMapper_Tests";
+			path = "Target Support Files/Pods-SQLiteMapper_Tests";
+			sourceTree = "<group>";
+		};
+		0D5AD844D7CFAA619746383B1626A2DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6355DD2B88860D31D63778BD85D92BD9 /* FMDB */,
+				3D017348B7C5CF7F7D568A84C4DBDC96 /* PSFoundation */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2EDE79774503FA1035E192E08FD5F5ED /* SQLiteMapper */ = {
+			isa = PBXGroup;
+			children = (
+				C76BB636104457A6ACD8CF74941E4744 /* Classes */,
+			);
+			path = SQLiteMapper;
+			sourceTree = "<group>";
+		};
+		333C234A1F74DA6462C518E61FAE5FC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8249CC62183F94E4DA80B01DE75D06E7 /* FMDB.framework */,
+				139EB4FD33C79EB50BF1D32008DA9BD9 /* PSFoundation.framework */,
+				94A820EB7FE46C76C3501CBE5C321C0D /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3C6C3625BC33AB6FBADB73A0C7E03676 /* SQLiteMapper */ = {
+			isa = PBXGroup;
+			children = (
+				2EDE79774503FA1035E192E08FD5F5ED /* SQLiteMapper */,
+				E0D1B6C9C7FDCCFBC856115BED1606BB /* Support Files */,
+			);
+			name = SQLiteMapper;
+			path = ../..;
+			sourceTree = "<group>";
+		};
+		3D017348B7C5CF7F7D568A84C4DBDC96 /* PSFoundation */ = {
+			isa = PBXGroup;
+			children = (
+				7A3AD3E04AA922E79CF1A9A64769E655 /* AbstractJSONModel.h */,
+				874E6F52D0EEBF416676965674E1F26F /* AbstractJSONModel.m */,
+				CD708CDFF1E41364678219723371F501 /* AbstractModel.h */,
+				FE49D56D01CFEDE46EC09C90213DBF59 /* AbstractModel.m */,
+				BEC3460AD6AB2EE5E767B329778AB894 /* BaseObject.h */,
+				F8C46891C65BDA156393616EA946DD44 /* BaseObject.m */,
+				FADF65FAB084746AE468CFAAC339D49A /* DataLoadValidator.h */,
+				CC68DC6CBCAA38FD7EA08296583FE5BE /* DataLoadValidator.m */,
+				840F222760D4F56E9500EB5B91D1ED68 /* ext.h */,
+				3AB389E661189A4E11E3F357EB800A75 /* model.h */,
+				B92ED39B50AE25A92C46A4AFFFF48A65 /* NSArray+PSFoundation.h */,
+				46C4EE61525271661ECF881C980C16A4 /* NSArray+PSFoundation.m */,
+				43855708DE29B019696C626A97D04BCB /* NSBundle+PSFoundation.h */,
+				1BF7991B4836F214F4117B11D73C5C3B /* NSBundle+PSFoundation.m */,
+				3870066A811325B4CD9336B7FFBD6EAC /* NSDate+PSFoundation.h */,
+				3B546177A4BC08C498A4B8CD16D8CEE4 /* NSDate+PSFoundation.m */,
+				7FE1459F708A03089F3C020E3B570535 /* NSFileManager+PSFoundation.h */,
+				4E621F83B9517AE86393EEF21B0AB8C8 /* NSFileManager+PSFoundation.m */,
+				C67B44A52FE964E706E153035356BC22 /* NSObject+PSFoundation.h */,
+				37E9712D0096CD8AE8D6BA3CBD0B729A /* NSObject+PSFoundation.m */,
+				6E71358B6A68B4A7E3A2B219A09DD740 /* NSString+PSFoundation.h */,
+				7985A267001A60B8403ACEC25FC6FF3A /* NSString+PSFoundation.m */,
+				F004D59896E97BEC19344A20BA868AE6 /* NSURL+PSFoundation.h */,
+				420B2D5D5D2039E9F0EED88FD2ED1A54 /* NSURL+PSFoundation.m */,
+				915BE5E22C33D29F37C028F5598280D6 /* NSURLRequest+PSFoundation.h */,
+				EC2DB90A7903C1375D4A924717F83F0B /* NSURLRequest+PSFoundation.m */,
+				08C18C2EC5BF61B42086184558B5C94D /* PSFoundation.h */,
+				36EDF2989510CD2DE130815CBFD163E0 /* PSFoundation.m */,
+				B0BA40C52322DACF043275EE94AFC8F1 /* Resources */,
+				AA3C2C0758F6495B84099DCDD3A0BEB7 /* Support Files */,
+			);
+			path = PSFoundation;
+			sourceTree = "<group>";
+		};
+		42047E5AFFE5A8D2CEA5753BC263FEF1 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				61A411F807F733A9788EACD2A04C2DF1 /* Pods-SQLiteMapper_Example */,
+				0CEC491A614A8F7B493589FED51D98DD /* Pods-SQLiteMapper_Tests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4B5699EE279FBEEC0A8F3CF736F5AE16 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1F420A28CA63AA46FFB40459FA48C325 /* FMDB.framework */,
+				438EA8A3D629073004F415CFF282BADF /* Pods_SQLiteMapper_Example.framework */,
+				C4799BE3FDD8AD98AC82202960765EC5 /* Pods_SQLiteMapper_Tests.framework */,
+				2435ED100E625A3085FF327996E01396 /* PSFoundation.bundle */,
+				F97BB2C6172F241923F98DFF12DDB8C9 /* PSFoundation.framework */,
+				9861D70D3659C2AB2042C00091ECDBC8 /* SQLiteMapper.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E90A05E6842E343235963CB08DBDA0D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				AED8E1909D189317E35EA832F82BD9F8 /* FMDB.modulemap */,
+				16EE3CF219AA0713D40DA45C3896CE35 /* FMDB.xcconfig */,
+				151E43513D6494B73716E466F85C1D95 /* FMDB-dummy.m */,
+				D04C46D8676876DE5B48A857B5E2A2BB /* FMDB-prefix.pch */,
+				027DA712DF485D866B0600403CAC13FE /* FMDB-umbrella.h */,
+				F494C3DB524568FAEA89CFC2558C3FE4 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FMDB";
+			sourceTree = "<group>";
+		};
+		61A411F807F733A9788EACD2A04C2DF1 /* Pods-SQLiteMapper_Example */ = {
+			isa = PBXGroup;
+			children = (
+				9AAEF9A4BB8C2D9585628302E8F0572A /* Info.plist */,
+				49D509297585D0271BA6895E4F11CA80 /* Pods-SQLiteMapper_Example.modulemap */,
+				EF708E7C7760D3A5ABEE2F99E1680F2A /* Pods-SQLiteMapper_Example-acknowledgements.markdown */,
+				C0E2466BC53E7E9918C2D4603033F23D /* Pods-SQLiteMapper_Example-acknowledgements.plist */,
+				484D801F5866FEE450D14EA14C6F275D /* Pods-SQLiteMapper_Example-dummy.m */,
+				7326C80387430BB73E129D14760BC1FC /* Pods-SQLiteMapper_Example-frameworks.sh */,
+				E4AE41E82D8428499794CFFF2A43AF26 /* Pods-SQLiteMapper_Example-resources.sh */,
+				E38D462091A0ADC8D5DF59B5E2DB9CB5 /* Pods-SQLiteMapper_Example-umbrella.h */,
+				DAE507F374292BAA125DE98A640B7D1F /* Pods-SQLiteMapper_Example.debug.xcconfig */,
+				34885A9CA8489AA2539D86F9C7BA0945 /* Pods-SQLiteMapper_Example.release.xcconfig */,
+			);
+			name = "Pods-SQLiteMapper_Example";
+			path = "Target Support Files/Pods-SQLiteMapper_Example";
+			sourceTree = "<group>";
+		};
+		6355DD2B88860D31D63778BD85D92BD9 /* FMDB */ = {
+			isa = PBXGroup;
+			children = (
+				A75DBB2CF8AD0792C0AFCF0957118229 /* standard */,
+				5E90A05E6842E343235963CB08DBDA0D /* Support Files */,
+			);
+			path = FMDB;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A8182A89F1B22814BB251EEF8EC4C022 /* Development Pods */,
+				333C234A1F74DA6462C518E61FAE5FC4 /* Frameworks */,
+				0D5AD844D7CFAA619746383B1626A2DB /* Pods */,
+				4B5699EE279FBEEC0A8F3CF736F5AE16 /* Products */,
+				42047E5AFFE5A8D2CEA5753BC263FEF1 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		94A820EB7FE46C76C3501CBE5C321C0D /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				9CC2B28871DEBF7258172D10DF9EBD5B /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A75DBB2CF8AD0792C0AFCF0957118229 /* standard */ = {
+			isa = PBXGroup;
+			children = (
+				74546C795609DBA4DFEEEC09AD927E00 /* FMDatabase.h */,
+				9114689EE92371152B8FCEB28E329BD5 /* FMDatabase.m */,
+				1CB170D2F548C6DDAD2211314FDC5633 /* FMDatabaseAdditions.h */,
+				400D1C29CD40E40AD30A76C7306191E7 /* FMDatabaseAdditions.m */,
+				632EFAA436C9C99FE5BD9306505A5D9C /* FMDatabasePool.h */,
+				993451B5353674FDFD023CEABA68F033 /* FMDatabasePool.m */,
+				F8AEC9CBE96B96BAF2A3E90B453B11E7 /* FMDatabaseQueue.h */,
+				01255E47CA9E47DAAAD94280DC88F1AE /* FMDatabaseQueue.m */,
+				789B5B26652329403DB94B15F6051140 /* FMDB.h */,
+				AF51A1EB0C0AE84EFF69B7AF8BAAD57C /* FMResultSet.h */,
+				8A06D4A2F993588B57FCFAD136A5FFA9 /* FMResultSet.m */,
+			);
+			name = standard;
+			sourceTree = "<group>";
+		};
+		A8182A89F1B22814BB251EEF8EC4C022 /* Development Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C6C3625BC33AB6FBADB73A0C7E03676 /* SQLiteMapper */,
+			);
+			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		AA3C2C0758F6495B84099DCDD3A0BEB7 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0A672391680B88E83F86F37CA09B5146 /* Info.plist */,
+				6E9EC194A3CDE42ABB7EEF2F925EDEB0 /* PSFoundation.modulemap */,
+				A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */,
+				BC143FBBAE010BE101259006CDF881CC /* PSFoundation-dummy.m */,
+				3587AF07404687F78CCF1EB933E9C74E /* PSFoundation-prefix.pch */,
+				1DC02E487ED169247CEBC4E553A45CB2 /* PSFoundation-umbrella.h */,
+				46107D18C9FECEBAEBF7CB3F5FC59E68 /* ResourceBundle-PSFoundation-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PSFoundation";
+			sourceTree = "<group>";
+		};
+		B0BA40C52322DACF043275EE94AFC8F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4BC74364F45AE4E3B405B7AC168EA8BD /* en.lproj */,
+				964F131FBBB66987B70EF92D30AA3A95 /* ko.lproj */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C76BB636104457A6ACD8CF74941E4744 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E1085E309146DAF275297BFC1426668C /* DBModel.swift */,
+				C5EBF2E4503265276A17F63C6B2F23DC /* NSBundle+SQLiteMapper.swift */,
+				4F939D34F48C3BF6F268DFE5F2014733 /* SQLiteMapper.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E0D1B6C9C7FDCCFBC856115BED1606BB /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				96E784DC8E2059F3E298704FC47E3A1B /* Info.plist */,
+				BA49F8E5824D6A8B2AB9B2CEDEC454FC /* SQLiteMapper.modulemap */,
+				5C6C492C9E33EA31A3A836965E914A28 /* SQLiteMapper.xcconfig */,
+				5E401A380B864A6BC8EACC538658F969 /* SQLiteMapper-dummy.m */,
+				A123C2166CF5304E73511AA536EAB618 /* SQLiteMapper-prefix.pch */,
+				F28E4F0A084B779A4E4595B89B1D9E72 /* SQLiteMapper-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "Example/Pods/Target Support Files/SQLiteMapper";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		24ADC83A2BE628605AADD32AB8EEA60C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DD0BC3D2CE495492404D847B19B9DB4 /* Pods-SQLiteMapper_Tests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		924A8A9ED0041E775A128EEA717492D6 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9FC350DB40473DED8934126D7FBF3C2 /* AbstractJSONModel.h in Headers */,
+				356A0EE4787963EC270F3C1654E19316 /* AbstractModel.h in Headers */,
+				39B20EF9F582270DC9C58AC95755E53B /* BaseObject.h in Headers */,
+				880FAE079031567F6C262114D8200085 /* DataLoadValidator.h in Headers */,
+				C76792C99423717FCA45A404B004CCFC /* ext.h in Headers */,
+				6D3150F1A6CC376A4774EF415375E686 /* model.h in Headers */,
+				448848365AD1F7DD667A9864D9745314 /* NSArray+PSFoundation.h in Headers */,
+				4D468FB5F2F05FB75C469E5218320798 /* NSBundle+PSFoundation.h in Headers */,
+				C2FADB36A22F88F154D0A9397305DB44 /* NSDate+PSFoundation.h in Headers */,
+				7BF43A967F7898BB21AD10FE758F10FF /* NSFileManager+PSFoundation.h in Headers */,
+				A498D145B28100976DD358E1A47CA216 /* NSObject+PSFoundation.h in Headers */,
+				2D458F3CAAD81966CEC86DC5C3B31EC6 /* NSString+PSFoundation.h in Headers */,
+				AEF186765F0021631FF7C88F5C52B3CC /* NSURL+PSFoundation.h in Headers */,
+				DC0A6BC312973685A8FD11437E83E67D /* NSURLRequest+PSFoundation.h in Headers */,
+				0D529158D4ED569DA44EA07F8100A706 /* PSFoundation-umbrella.h in Headers */,
+				74AB8F8B6168C76BCFE07416E3083F9D /* PSFoundation.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F61BE79D4B46C119C136EDE960CE78C /* FMDatabase.h in Headers */,
+				74695802583BDB0C0818AC1B97F63815 /* FMDatabaseAdditions.h in Headers */,
+				6C63E2BEBE2BC08BD46F6A91D0A08143 /* FMDatabasePool.h in Headers */,
+				E330886E0E7C450E9669C4BD025D9ABD /* FMDatabaseQueue.h in Headers */,
+				AD01D434D8D120A3767270766AD30797 /* FMDB-umbrella.h in Headers */,
+				3ECC23FFAE400A6B2658AAF2990D83BE /* FMDB.h in Headers */,
+				183A0D8AF38E0EE20E47F1FEF9B37327 /* FMResultSet.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E830799A10C0465EB2BC448BBF94C36F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F84586F3C88E81F488BF596099635AAD /* Pods-SQLiteMapper_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F24EBC2FF591FC0D8B60A5E1B53A78CA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76C0DAAC36A6DB7D7066F195D8406336 /* SQLiteMapper-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */;
+			buildPhases = (
+				6F019F4B57C689E3B448935B617CFF76 /* Sources */,
+				07163A0956D3012D6BF74E0B0E4CE17D /* Frameworks */,
+				A8A1B98F16F13F2F72C375E44D51EE8A /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FMDB;
+			productName = FMDB;
+			productReference = 1F420A28CA63AA46FFB40459FA48C325 /* FMDB.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		2E294B9B61113574B269A409E547D442 /* Pods-SQLiteMapper_Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5BFD989C663D6B558AE85CDA587A0297 /* Build configuration list for PBXNativeTarget "Pods-SQLiteMapper_Tests" */;
+			buildPhases = (
+				B59BF72415460392E1A88853D0F45691 /* Sources */,
+				B5C632A2E5C1B106C5ADC8327115F289 /* Frameworks */,
+				24ADC83A2BE628605AADD32AB8EEA60C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D25417367982A0913EAE8341C0266CBF /* PBXTargetDependency */,
+				7ED7872FA98229B5672B4BDE0E27CC7D /* PBXTargetDependency */,
+				CD292EF15392F0FDD50AB957D83B90CF /* PBXTargetDependency */,
+			);
+			name = "Pods-SQLiteMapper_Tests";
+			productName = "Pods-SQLiteMapper_Tests";
+			productReference = C4799BE3FDD8AD98AC82202960765EC5 /* Pods_SQLiteMapper_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		43B45F74E5BDB1F62739748DAB39922B /* PSFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 60FCD7F6C3B08AD0851AB31C76CF6740 /* Build configuration list for PBXNativeTarget "PSFoundation" */;
+			buildPhases = (
+				CC03124E01457F16D267732784F17A96 /* Sources */,
+				843BA5FFA9DC95C0C292EA5FCB9492A0 /* Frameworks */,
+				AEA2DACA553CAB21DB585D65318F2E09 /* Resources */,
+				924A8A9ED0041E775A128EEA717492D6 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8D97AA32CA707C172504142D828668E3 /* PBXTargetDependency */,
+			);
+			name = PSFoundation;
+			productName = PSFoundation;
+			productReference = F97BB2C6172F241923F98DFF12DDB8C9 /* PSFoundation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		5C262FFAB585569449F0AC2C96CF992E /* Pods-SQLiteMapper_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3046BAB7E1C789654FE6970626C6F5F1 /* Build configuration list for PBXNativeTarget "Pods-SQLiteMapper_Example" */;
+			buildPhases = (
+				0306DED91FF0B32081AAC15E37356222 /* Sources */,
+				2D56B09D9770D251E068294532ED5DCF /* Frameworks */,
+				E830799A10C0465EB2BC448BBF94C36F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2C3212775E382B648EF48B44C3754F3C /* PBXTargetDependency */,
+				52C5B340B736142585DEEAF4AD2AE368 /* PBXTargetDependency */,
+				D0E0C156A002CB8D90E4C88E192F4A34 /* PBXTargetDependency */,
+			);
+			name = "Pods-SQLiteMapper_Example";
+			productName = "Pods-SQLiteMapper_Example";
+			productReference = 438EA8A3D629073004F415CFF282BADF /* Pods_SQLiteMapper_Example.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7B4614A6D000C5E45AA5F9C2CC1697D6 /* PSFoundation-PSFoundation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2EB153E5C9395D544F308356979BE851 /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */;
+			buildPhases = (
+				38455D7D2BD1C51478C52E52ABBFDE46 /* Sources */,
+				C81BF070C7982FE49D2CE50562FD420C /* Frameworks */,
+				1FFD54D5DFDEBD09C25F311B3F7A51A1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PSFoundation-PSFoundation";
+			productName = "PSFoundation-PSFoundation";
+			productReference = 2435ED100E625A3085FF327996E01396 /* PSFoundation.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		B575B0B3A57881BE8AEFEB071C711756 /* SQLiteMapper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92404B49D127D8B4C264C49BE21E04A3 /* Build configuration list for PBXNativeTarget "SQLiteMapper" */;
+			buildPhases = (
+				D4502A86BAC3EFA759ABD36720506E70 /* Sources */,
+				A7BE28FD801720ABDDA86AFBEAFA5A60 /* Frameworks */,
+				F24EBC2FF591FC0D8B60A5E1B53A78CA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				09640F31364AFA7652670AA91A3A0797 /* PBXTargetDependency */,
+				2F4FC93C6697B61C17C0FD84160512A9 /* PBXTargetDependency */,
+			);
+			name = SQLiteMapper;
+			productName = SQLiteMapper;
+			productReference = 9861D70D3659C2AB2042C00091ECDBC8 /* SQLiteMapper.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 4B5699EE279FBEEC0A8F3CF736F5AE16 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */,
+				5C262FFAB585569449F0AC2C96CF992E /* Pods-SQLiteMapper_Example */,
+				2E294B9B61113574B269A409E547D442 /* Pods-SQLiteMapper_Tests */,
+				43B45F74E5BDB1F62739748DAB39922B /* PSFoundation */,
+				7B4614A6D000C5E45AA5F9C2CC1697D6 /* PSFoundation-PSFoundation */,
+				B575B0B3A57881BE8AEFEB071C711756 /* SQLiteMapper */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FFD54D5DFDEBD09C25F311B3F7A51A1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF453B8FE9E73AB47658BC2FFE36560E /* en.lproj in Resources */,
+				67FB310DF34F9EBCF36F4EE60E1ED4D9 /* ko.lproj in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AEA2DACA553CAB21DB585D65318F2E09 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5F9D9D9ECC83FD73DDA8042B8AB8F4F8 /* PSFoundation.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		0306DED91FF0B32081AAC15E37356222 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF28E2798E6AB5379D196FC0B3578128 /* Pods-SQLiteMapper_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		38455D7D2BD1C51478C52E52ABBFDE46 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F019F4B57C689E3B448935B617CFF76 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F5A0569CB70F6F37A16E32EE210D0C66 /* FMDatabase.m in Sources */,
+				F0895B2A83F948153E1E5EA38A230B66 /* FMDatabaseAdditions.m in Sources */,
+				C8FC0929A42C36174794FE1ADFD620E3 /* FMDatabasePool.m in Sources */,
+				0D619A711F71058C9238B17E9AF48AFC /* FMDatabaseQueue.m in Sources */,
+				BA88E88A631D6BD023521B7206CE6C25 /* FMDB-dummy.m in Sources */,
+				7C818AE74E830311E61FF1A7E42D0713 /* FMResultSet.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B59BF72415460392E1A88853D0F45691 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8962108D275D067EC272F43DA27B03D3 /* Pods-SQLiteMapper_Tests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CC03124E01457F16D267732784F17A96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD06AAC73EE61AEC64F7FFB0DF660481 /* AbstractJSONModel.m in Sources */,
+				6901C07AD3A70B8D71026E5DCED3E670 /* AbstractModel.m in Sources */,
+				DC52CEC1396647FB3BFF704ABA73CF94 /* BaseObject.m in Sources */,
+				BB01CB6BBB71640E3960309215FDF074 /* DataLoadValidator.m in Sources */,
+				33C101C535054028190E6B3068425B69 /* NSArray+PSFoundation.m in Sources */,
+				1EB672AE92F3A1AEFC12C827924B2F29 /* NSBundle+PSFoundation.m in Sources */,
+				2CB86A732E0E6D3F82BEEE5B3A287C9E /* NSDate+PSFoundation.m in Sources */,
+				387F7B30E452A88291CEEB210C45EE60 /* NSFileManager+PSFoundation.m in Sources */,
+				9697AFA8C4B5CCB8F2C8E10F3037765E /* NSObject+PSFoundation.m in Sources */,
+				B3CB6107C4F1EA5D972DEDF8311C9A88 /* NSString+PSFoundation.m in Sources */,
+				643FD8E9B1BD776AB7265A131C158BB6 /* NSURL+PSFoundation.m in Sources */,
+				9DEF3F1F37CA2B7D4CAB96C8124B79AB /* NSURLRequest+PSFoundation.m in Sources */,
+				DE3096F5280253804545A728472CC740 /* PSFoundation-dummy.m in Sources */,
+				95B3C7A795048A31FDF6BD0D9B502C64 /* PSFoundation.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4502A86BAC3EFA759ABD36720506E70 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				89583359CD2C7AE8B43A9A83D97560B2 /* DBModel.swift in Sources */,
+				FA0F8C0CBF00BD33B306D6B758473620 /* NSBundle+SQLiteMapper.swift in Sources */,
+				F2A119A80367061C29077A8DC6E8E608 /* SQLiteMapper-dummy.m in Sources */,
+				73641CCC2759EC52EB0C04C51A7C3F70 /* SQLiteMapper.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		09640F31364AFA7652670AA91A3A0797 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = A299DA87477D514AC8422FCBED10A5AC /* PBXContainerItemProxy */;
+		};
+		2C3212775E382B648EF48B44C3754F3C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = BCF4DCFCEC0DD857E358F8B1AC83AA33 /* PBXContainerItemProxy */;
+		};
+		2F4FC93C6697B61C17C0FD84160512A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PSFoundation;
+			target = 43B45F74E5BDB1F62739748DAB39922B /* PSFoundation */;
+			targetProxy = 6933704B701D859E5C11B2AD0522EF1D /* PBXContainerItemProxy */;
+		};
+		52C5B340B736142585DEEAF4AD2AE368 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PSFoundation;
+			target = 43B45F74E5BDB1F62739748DAB39922B /* PSFoundation */;
+			targetProxy = 455113486C679201B9FE6C6FB76729F0 /* PBXContainerItemProxy */;
+		};
+		7ED7872FA98229B5672B4BDE0E27CC7D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PSFoundation;
+			target = 43B45F74E5BDB1F62739748DAB39922B /* PSFoundation */;
+			targetProxy = 22BFF69171A4F30BEA462E4DC82D692A /* PBXContainerItemProxy */;
+		};
+		8D97AA32CA707C172504142D828668E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "PSFoundation-PSFoundation";
+			target = 7B4614A6D000C5E45AA5F9C2CC1697D6 /* PSFoundation-PSFoundation */;
+			targetProxy = 81A561BA5F121753226206E43FC390A4 /* PBXContainerItemProxy */;
+		};
+		CD292EF15392F0FDD50AB957D83B90CF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLiteMapper;
+			target = B575B0B3A57881BE8AEFEB071C711756 /* SQLiteMapper */;
+			targetProxy = E16F302526ED8C3B4DB22FF200EDBDD5 /* PBXContainerItemProxy */;
+		};
+		D0E0C156A002CB8D90E4C88E192F4A34 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SQLiteMapper;
+			target = B575B0B3A57881BE8AEFEB071C711756 /* SQLiteMapper */;
+			targetProxy = DB90001C7CF98E4D37475EF5A6E2DD70 /* PBXContainerItemProxy */;
+		};
+		D25417367982A0913EAE8341C0266CBF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FMDB;
+			target = 23CF27B2BA6AC7125EFFEDA8C5AA819F /* FMDB */;
+			targetProxy = 196A22FD7DC4BD9CDD9C5B8185E182CE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		3606871B814C53A835D7AEF48F29747B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16EE3CF219AA0713D40DA45C3896CE35 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		38E519E3ED5484BDF30AA9750BD16AAF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DAE507F374292BAA125DE98A640B7D1F /* Pods-SQLiteMapper_Example.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SQLiteMapper_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQLiteMapper_Example/Pods-SQLiteMapper_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SQLiteMapper_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		47BEF9D903506B003EA5C2B249729489 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		52465CE4826B5BF0051968F8077552D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PSFoundation/PSFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PSFoundation/PSFoundation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5619B880BCDC5D5E39F35255934A1F9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16EE3CF219AA0713D40DA45C3896CE35 /* FMDB.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FMDB/FMDB-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/FMDB/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/FMDB/FMDB.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = FMDB;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F135DA5722052F8F64521FE18E61432 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6C492C9E33EA31A3A836965E914A28 /* SQLiteMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLiteMapper/SQLiteMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLiteMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLiteMapper/SQLiteMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SQLiteMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		611D8540D7E8E0E54EB521937AE23E88 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A7CC359A26CDC6B9E98E7E9083B9808A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PSFoundation/PSFoundation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/PSFoundation/PSFoundation.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAF678CED40D3499169D10F63CA0719E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B1A82C742BC616AFDF8A69BD57CA75C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 05648C284A742AFFE12FCB551664FE1E /* Pods-SQLiteMapper_Tests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SQLiteMapper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQLiteMapper_Tests/Pods-SQLiteMapper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SQLiteMapper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		B513BD20F03A5D6FF6FFDC9285BE4EB0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C6C492C9E33EA31A3A836965E914A28 /* SQLiteMapper.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SQLiteMapper/SQLiteMapper-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SQLiteMapper/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SQLiteMapper/SQLiteMapper.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SQLiteMapper;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C9826C1148FB00E6B25637236651492B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5A2FAAB0329E7A2EFA0BFC8A5251C7B /* PSFoundation.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/PSFoundation";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/PSFoundation/ResourceBundle-PSFoundation-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = PSFoundation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		CBDB5B0088477631FDC14DFC3AE459D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 174C0E3AF1BA5A03FDB95106FBBF9257 /* Pods-SQLiteMapper_Tests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SQLiteMapper_Tests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQLiteMapper_Tests/Pods-SQLiteMapper_Tests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SQLiteMapper_Tests;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D1028608BB9534D2DBC194F2EE3F4A4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34885A9CA8489AA2539D86F9C7BA0945 /* Pods-SQLiteMapper_Example.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-SQLiteMapper_Example/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-SQLiteMapper_Example/Pods-SQLiteMapper_Example.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_SQLiteMapper_Example;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				47BEF9D903506B003EA5C2B249729489 /* Debug */,
+				AAF678CED40D3499169D10F63CA0719E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2EB153E5C9395D544F308356979BE851 /* Build configuration list for PBXNativeTarget "PSFoundation-PSFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9826C1148FB00E6B25637236651492B /* Debug */,
+				611D8540D7E8E0E54EB521937AE23E88 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3046BAB7E1C789654FE6970626C6F5F1 /* Build configuration list for PBXNativeTarget "Pods-SQLiteMapper_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				38E519E3ED5484BDF30AA9750BD16AAF /* Debug */,
+				D1028608BB9534D2DBC194F2EE3F4A4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5BFD989C663D6B558AE85CDA587A0297 /* Build configuration list for PBXNativeTarget "Pods-SQLiteMapper_Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDB5B0088477631FDC14DFC3AE459D0 /* Debug */,
+				B1A82C742BC616AFDF8A69BD57CA75C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		60FCD7F6C3B08AD0851AB31C76CF6740 /* Build configuration list for PBXNativeTarget "PSFoundation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				52465CE4826B5BF0051968F8077552D0 /* Debug */,
+				A7CC359A26CDC6B9E98E7E9083B9808A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92404B49D127D8B4C264C49BE21E04A3 /* Build configuration list for PBXNativeTarget "SQLiteMapper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F135DA5722052F8F64521FE18E61432 /* Debug */,
+				B513BD20F03A5D6FF6FFDC9285BE4EB0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E130BB4A68655453C9FDC5692FA44094 /* Build configuration list for PBXNativeTarget "FMDB" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5619B880BCDC5D5E39F35255934A1F9A /* Debug */,
+				3606871B814C53A835D7AEF48F29747B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

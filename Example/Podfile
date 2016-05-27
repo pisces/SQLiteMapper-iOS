@@ -1,9 +1,11 @@
 use_frameworks!
 
 target 'SQLiteMapper_Example' do
+platform :ios, '8.0'
   pod 'SQLiteMapper', :path => '../'
 end
 
 target 'SQLiteMapper_Tests' do
+platform :ios, '8.0'
   pod 'SQLiteMapper', :path => '../'
 end
