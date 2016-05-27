@@ -73,9 +73,10 @@ public class SQLiteMapper: NSObject {
             do {
                 let (result, db) = try self.select(dbName, mapName: mapName, sqlId: sqlId, param: param)
                 
-                if result != nil {
-                    result?.next()
-                    item = T(object: result?.resultDictionary()!)
+                if result != nil && result!.next() == true {
+                    item = T(object: result!.resultDictionary()!)
+                    
+                    print("dict ->", result!.resultDictionary()!, item!.dictionary)
                 }
                 
                 db?.close()
