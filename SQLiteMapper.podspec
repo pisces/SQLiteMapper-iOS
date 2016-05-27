@@ -19,11 +19,11 @@ Pod::Spec.new do |s|
 
   s.description      = "SQLiteMapper is."
 
-  s.homepage         = "https://github.com/pisces/SQLiteMapper-iOS-SDK"
+  s.homepage         = "https://github.com/pisces/SQLiteMapper-iOS"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "pisces" => "hh963103@gmail.com" }
-  s.source           = { :git => "https://github.com/pisces/SQLiteMapper-iOS-SDK.git", :tag => s.
+  s.source           = { :git => "https://github.com/pisces/SQLiteMapper-iOS.git", :tag => s.
   version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
