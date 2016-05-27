@@ -1,6 +1,0 @@
-framework module PSFoundation {
-  umbrella header "PSFoundation-umbrella.h"
-
-  export *
-  module * { export * }
-}
