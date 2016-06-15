@@ -75,8 +75,6 @@ public class SQLiteMapper: NSObject {
                 
                 if result != nil && result!.next() == true {
                     item = T(object: result!.resultDictionary()!)
-                    
-                    print("dict ->", result!.resultDictionary()!, item!.dictionary)
                 }
                 
                 db?.close()
@@ -100,9 +98,6 @@ public class SQLiteMapper: NSObject {
                 let (result, db) = try self.select(dbName, mapName: mapName, sqlId: sqlId, param: param)
                 
                 while result?.next() == true {
-                    
-                    print("result?.resultDictionary() ->", result?.resultDictionary())
-                    
                     array.append(T(object: result?.resultDictionary()!))
                 }
                 
@@ -113,6 +108,10 @@ public class SQLiteMapper: NSObject {
         }
         
         return array
+    }
+    
+    public func setUp(plistName aPlistName: String!) {
+        self.setUp(plistName: aPlistName, bundle: NSBundle.mainBundle())
     }
     
     public func setUp(plistName aPlistName: String!, bundle: NSBundle!) {
