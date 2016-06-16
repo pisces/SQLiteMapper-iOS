@@ -62,11 +62,20 @@ public class SQLiteMapper: NSObject {
         return result
     }
     
-    public func select<T: AbstractJSONModel>(dbName: String!, mapName: String!, sqlId: String!) -> T? {
-        return select(dbName, mapName: mapName, sqlId: sqlId, param: nil)
+    public func select<T: AbstractJSONModel>(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        completion: (result: T?, error: NSError?) -> Void) {
+        select(dbName, mapName: mapName, sqlId: sqlId, param: nil, completion: completion)
     }
     
-    public func select<T: AbstractJSONModel>(dbName: String!, mapName: String!, sqlId: String!, param: NSDictionary?) -> T? {
+    public func select<T: AbstractJSONModel>(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        param: NSDictionary?,
+        completion: (result: T?, error: NSError?) -> Void) {
         var item: T?
         
         dispatch_sync(queue) {
@@ -78,19 +87,32 @@ public class SQLiteMapper: NSObject {
                 }
                 
                 db?.close()
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(result: item, error: nil)
+                })
             } catch let error as NSError {
-                print("error ->", error)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(result: nil, error: error)
+                })
             }
         }
-        
-        return item
     }
     
-    public func select<T: AbstractJSONModel>(dbName: String!, mapName: String!, sqlId: String!) -> [T]? {
-        return select(dbName, mapName: mapName, sqlId: sqlId, param: nil)
+    public func select<T: AbstractJSONModel>(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        completion: (result: [T]?, error: NSError?) -> Void) {
+        select(dbName, mapName: mapName, sqlId: sqlId, param: nil, completion: completion)
     }
     
-    public func select<T: AbstractJSONModel>(dbName: String!, mapName: String!, sqlId: String!, param: NSDictionary?) -> [T]? {
+    public func select<T: AbstractJSONModel>(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        param: NSDictionary?,
+        completion: (result: [T]?, error: NSError?) -> Void) {
         var array: [T] = []
         
         dispatch_sync(queue) {
@@ -102,12 +124,16 @@ public class SQLiteMapper: NSObject {
                 }
                 
                 db?.close()
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(result: array, error: nil)
+                })
             } catch let error as NSError {
-                print("error ->", error)
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(result: nil, error: error)
+                })
             }
         }
-        
-        return array
     }
     
     public func setUp(plistName aPlistName: String!) {
@@ -127,11 +153,20 @@ public class SQLiteMapper: NSObject {
         }
     }
     
-    public func update(dbName: String!, mapName: String!, sqlId: String!) -> Bool {
-        return update(dbName, mapName: mapName, sqlId: sqlId, param: nil)
+    public func update(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        completion: (sucess: Bool, lastInsertRowId: Int64) -> Void) {
+        return update(dbName, mapName: mapName, sqlId: sqlId, param: nil, completion: completion)
     }
     
-    public func update(dbName: String!, mapName: String!, sqlId: String!, param: NSDictionary?) -> Bool {
+    public func update(
+        dbName: String!,
+        mapName: String!,
+        sqlId: String!,
+        param: NSDictionary?,
+        completion: (success: Bool, lastInsertRowId: Int64) -> Void) {
         var success: Bool = true
         
         dispatch_sync(queue) {
@@ -141,7 +176,6 @@ public class SQLiteMapper: NSObject {
                 if let dbModel = self.dbModel(dbName: dbName) {
                     if let queries = dbModel.queries(mapName, sqlId: sqlId) {
                         db = try self.getCurrentDB(dbModel)
-                        
                         db!.beginTransaction()
                         
                         for query in queries {
@@ -153,24 +187,36 @@ public class SQLiteMapper: NSObject {
                                     success = false
                                     db!.rollback()
                                     db!.close()
+                                    
+                                    dispatch_async(dispatch_get_main_queue(), {
+                                        completion(success: false, lastInsertRowId: 0)
+                                    })
                                     return
                                 }
                             }
                         }
                         
                         db!.commit()
+                        
+                        let lastInsertRowId: Int64 = (db?.lastInsertRowId())!
+                        
                         db!.close()
+                        
+                        dispatch_async(dispatch_get_main_queue(), {
+                            completion(success: true, lastInsertRowId: lastInsertRowId)
+                        })
                     }
                 }
             } catch let error as NSError {
                 success = false
                 db?.rollback()
                 db?.close()
-                print("error ->", error)
+                
+                dispatch_async(dispatch_get_main_queue(), {
+                    completion(success: false, lastInsertRowId: 0)
+                })
             }
         }
-        
-        return success
     }
     
     // ================================================================================================
