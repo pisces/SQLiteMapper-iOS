@@ -36,16 +36,17 @@ public class SQLiteMapper: NSObject {
     }
     
     public func makeQuery(raw: String!, param: NSDictionary?) -> String? {
+        var result: String = raw
+            .stringByTrimmingCharactersInSet(NSCharacterSet.whitespaceAndNewlineCharacterSet())
+        
         if param == nil {
-            return raw
+            return result
         }
         
-        var result: String = raw
         var range: NSRange
         
         for (key, value) in param! {
             range = NSMakeRange(0, result.characters.count)
-            
             let queryRegex = try? NSRegularExpression(pattern: "@(.*|)\\{" + (key as! String) + "\\}", options: [.CaseInsensitive])
             
             if (queryRegex?.matchesInString(result, options: [], range: range).count > 0) {
@@ -54,9 +55,18 @@ public class SQLiteMapper: NSObject {
                 let regex = try? NSRegularExpression(pattern: "\\{" + (key as! String) + "\\}", options: [.CaseInsensitive])
                 
                 if (regex?.matchesInString(result, options: [], range: range).count > 0) {
-                    result = (regex?.stringByReplacingMatchesInString(result, options: NSMatchingOptions.ReportCompletion, range: range, withTemplate: "\"" + String(value) + "\""))!
+                    let valueString = value is String ? "\"" + String(value) + "\"" : String(value)
+                    
+                    result = (regex?.stringByReplacingMatchesInString(result, options: NSMatchingOptions.ReportCompletion, range: range, withTemplate: valueString))!
                 }
             }
+        }
+        
+        range = NSMakeRange(0, result.characters.count)
+        let regex = try? NSRegularExpression(pattern: "\\{(\\w+)\\}", options: [.CaseInsensitive])
+        
+        if (regex?.matchesInString(result, options: [], range: range).count > 0) {
+            result = (regex?.stringByReplacingMatchesInString(result, options: NSMatchingOptions.ReportCompletion, range: range, withTemplate: "NULL"))!
         }
         
         return result
@@ -157,7 +167,7 @@ public class SQLiteMapper: NSObject {
         dbName: String!,
         mapName: String!,
         sqlId: String!,
-        completion: (sucess: Bool, lastInsertRowId: Int64) -> Void) {
+        completion: (sucess: Bool, lastInsertRowId: Int) -> Void) {
         return update(dbName, mapName: mapName, sqlId: sqlId, param: nil, completion: completion)
     }
     
@@ -166,11 +176,18 @@ public class SQLiteMapper: NSObject {
         mapName: String!,
         sqlId: String!,
         param: NSDictionary?,
-        completion: (success: Bool, lastInsertRowId: Int64) -> Void) {
+        completion: (success: Bool, lastInsertRowId: Int) -> Void) {
         var success: Bool = true
         
         dispatch_sync(queue) {
             var db: FMDatabase?
+            
+            func error(message: String) {
+                dispatch_async(dispatch_get_main_queue(), {
+                    print("Error: \(message)")
+                    completion(success: false, lastInsertRowId: 0)
+                })
+            }
             
             do {
                 if let dbModel = self.dbModel(dbName: dbName) {
@@ -180,7 +197,7 @@ public class SQLiteMapper: NSObject {
                         
                         for query in queries {
                             let query = self.makeQuery(query, param: param)!
-                            let pattern = try NSRegularExpression(pattern: "^(delete|DELETE|insert|INSERT|update|UPDATE)\\s", options: [.CaseInsensitive])
+                            let pattern = try NSRegularExpression(pattern: "^(delete|DELETE|insert|INSERT||update|UPDATE)(.*)", options: [.CaseInsensitive])
                             
                             if self.matchesPattern(pattern, inString: query) {
                                 if !(try db!.executeUpdate(query, withParameterDictionary: nil)) {
@@ -198,23 +215,24 @@ public class SQLiteMapper: NSObject {
                         
                         db!.commit()
                         
-                        let lastInsertRowId: Int64 = (db?.lastInsertRowId())!
+                        let lastInsertRowId: Int = Int(db!.lastInsertRowId())
                         
                         db!.close()
                         
                         dispatch_async(dispatch_get_main_queue(), {
                             completion(success: true, lastInsertRowId: lastInsertRowId)
                         })
+                    } else {
+                        error("sqlId \"\(sqlId)\" does not exist!")
                     }
+                } else {
+                    error("dbName \"\(dbName)\" does not exist!")
                 }
-            } catch let error as NSError {
+            } catch let err as NSError {
                 success = false
                 db?.rollback()
                 db?.close()
-                
-                dispatch_async(dispatch_get_main_queue(), {
-                    completion(success: false, lastInsertRowId: 0)
-                })
+                error("\(err.domain)!")
             }
         }
     }
@@ -243,7 +261,6 @@ public class SQLiteMapper: NSObject {
     
     private func getCurrentDB(dbModel: DBModel) throws -> FMDatabase? {
         let dstPath = "\(NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true).first!)/\(dbModel.dbFilePath!)"
-        
         if !NSFileManager.defaultManager().fileExistsAtPath(dstPath) {
             let srcPath: String = (bundle?.pathForResource(dbModel.dbFilePath!, ofType: nil)!)!
             
