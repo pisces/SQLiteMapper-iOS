@@ -177,8 +177,6 @@ public class SQLiteMapper: NSObject {
         sqlId: String!,
         param: NSDictionary?,
         completion: (success: Bool, lastInsertRowId: Int) -> Void) {
-        var success: Bool = true
-        
         dispatch_sync(queue) {
             var db: FMDatabase?
             
@@ -201,7 +199,7 @@ public class SQLiteMapper: NSObject {
                             
                             if self.matchesPattern(pattern, inString: query) {
                                 if !(try db!.executeUpdate(query, withParameterDictionary: nil)) {
-                                    success = false
+                                    print("asfkdjlsjakfdskl")
                                     db!.rollback()
                                     db!.close()
                                     
@@ -229,7 +227,6 @@ public class SQLiteMapper: NSObject {
                     error("dbName \"\(dbName)\" does not exist!")
                 }
             } catch let err as NSError {
-                success = false
                 db?.rollback()
                 db?.close()
                 error("\(err.domain)!")
