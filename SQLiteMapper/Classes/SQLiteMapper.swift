@@ -123,9 +123,10 @@ public class SQLiteMapper: NSObject {
         sqlId: String!,
         param: NSDictionary?,
         completion: (result: [T]?, error: NSError?) -> Void) {
-        var array: [T] = []
         
         dispatch_sync(queue) {
+            var array: [T] = []
+            
             do {
                 let (result, db) = try self.select(dbName, mapName: mapName, sqlId: sqlId, param: param)
                 
