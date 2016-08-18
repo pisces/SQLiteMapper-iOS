@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
   s.dependency 'PSFoundation'
   s.dependency 'FMDB'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '8.2'
   s.requires_arc = true
   s.source_files = 'SQLiteMapper/Classes/*.*'
 
