@@ -233,7 +233,7 @@ NSString *const kModelDidSynchronizeNotification = @"kModelDidSynchronizeNotific
         if (splitPropertyAttributes.count > 0) {
             NSString *encodeType = splitPropertyAttributes[0];
             NSArray *splitEncodeType = [encodeType componentsSeparatedByString:@"\""];
-            NSString *className = splitEncodeType[1];
+            NSString *className = splitEncodeType.lastObject;
             propertyClass = NSClassFromString(className);
         }
     }

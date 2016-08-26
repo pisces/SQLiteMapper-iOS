@@ -2,7 +2,7 @@ PODS:
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
-  - PSFoundation (1.0.3)
+  - PSFoundation (1.0.51)
   - SQLiteMapper (0.1.0):
     - FMDB
     - PSFoundation
@@ -16,9 +16,9 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
-  PSFoundation: b9e94c4279bac37b87529384da601e04c5ed0952
+  PSFoundation: 8546e1ab994991c75427422309317f55088c5a79
   SQLiteMapper: 6c51072f5da65d3e826cd0c46f0b5a802dea7553
 
-PODFILE CHECKSUM: 9e83219611fa3f0d0cf3400b52ab7feebe113a1d
+PODFILE CHECKSUM: 997b6681847ba5ab2c250f7b9f05ae0de59fd745
 
 COCOAPODS: 1.0.0

@@ -18,8 +18,8 @@ public class DBModel: AbstractJSONModel {
     
     override public func setProperties(object: AnyObject!) {
         if let dict = object as? NSDictionary {
-            self.dbName = dict[dbNameKey] as? String;
-            self.dbFilePath = dict[dbFilePathKey] as? String;
+            self.dbName = dict[dbNameKey] as? String
+            self.dbFilePath = dict[dbFilePathKey] as? String
             
             if let mapsDict = dict["sqlmaps"] as? NSDictionary {
                 let mutableMaps: NSMutableDictionary = NSMutableDictionary()
@@ -39,7 +39,7 @@ public class DBModel: AbstractJSONModel {
         if value is NSString {
             return [value as! String]
         } else if value is NSArray {
-            return value as! Array<String>
+            return value as? Array<String>
         }
         
         return nil
